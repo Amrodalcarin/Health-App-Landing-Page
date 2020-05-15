@@ -33,5 +33,9 @@
     "tailwindcss": "^1.2.0",
     "tailwindcss-elevation": "^0.3.3",
     "tailwindcss-filters": "^3.0.0"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "parcel": "^1.12.4"
   }
 }
