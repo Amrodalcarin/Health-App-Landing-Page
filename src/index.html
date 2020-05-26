@@ -6,7 +6,7 @@
   <link rel="icon" href="assets/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/slide.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>NutriCare</title>
@@ -48,65 +48,67 @@
     </nav>
     <header class="w-full h-1/2 py-10 px-16 md:px-40 md:h-3/5 xl:px-64 xl:h-3/4"
       style="background-image: url(assets/main_bg.jpg); background-size: cover;">
-      <!--dos slides-->
-      <div class="slideshow">
-        <div class="mySlides fade">
-      <div style="background: linear-gradient(
-            rgba(0, 0, 0, 0.39), 
-            rgba(0, 0, 0, 0.39)
-          ), url(assets/food_background.jpg); background-size: cover;  background-position: right; width: 100%; height: 450px;"
-        class="bg-white elevation-9 h-full block overflow-hidden flex xl:items-end lg:items-end lg:flex-row justify-center flex-col-reverse lg:p5 p-2">
-        <img src="assets/NutriAPP_mockup.png" alt="La mejor APP de nutrición en tus manos"
-          class="relative lg:top-5 lg:-left-5 top-5 -left-10 lg:h-9/10 lg:w-auto md:h-auto md:w-9/12 h-48 w-48" data-aos="zoom-in" />
-        <div
-          class="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-white h-1/3 xl:p-5 p-3 flex justify-center items-end" data-aos="zoom-in-up">
-          <strong><i>NutriCare te ayuda a llevar una mejor alimentación.</i></strong>
+
+      <div class="carousel relative shadow-2xl bg-white">
+        <div class="carousel-inner relative overflow-hidden w-full">
+          <!--Slide 1-->
+          <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+          <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div style="background: linear-gradient(
+              rgba(0, 0, 0, 0.39), 
+              rgba(0, 0, 0, 0.39)
+            ), url(assets/food_background.jpg); background-size: cover;  background-position: right;"
+          class="block h-full w-full text-white text-5xl text-center">
+              <i>NutriCare te ayuda a llevar una mejor alimentación.</i>
+        </div>
+          </div>
+          <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+          
+          <!--Slide 2-->
+          <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+          <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div style="background: linear-gradient(
+              rgba(0, 0, 0, 0.39), 
+              rgba(0, 0, 0, 0.39)
+            ), url(assets/tasty.jpg); background-size: cover;  background-position: right;"
+            class="block h-full w-full text-white text-5xl text-left">
+              <img class="object-contain object-left-bottom w-50 h-full"
+              src="assets/NutriAPP_mockup.png" alt="La mejor APP de nutrición en tus manos" />              
+              <i>Facil y sensilla</i></div>
+          </div>
+          <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+          
+          <!--Slide 3-->
+          <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+          <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div style="background: linear-gradient(
+              rgba(0, 0, 0, 0.39), 
+              rgba(0, 0, 0, 0.39)
+            ), url(assets/food-live.jpg); background-size: cover;  background-position: right;" 
+            class="block h-full w-full text-white text-5xl text-center"><i>Come de todo y bien</i></div>
+          </div>
+          <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+      
+          <!-- Add additional indicators for each slide-->
+          <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+              <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+            <li class="inline-block mr-3">
+              <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+            <li class="inline-block mr-3">
+              <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+          </ol>
+          
         </div>
       </div>
-      <div class="numbertext">1 / 3</div>
-    </div>
-
-        <div class="mySlides fade">
-      <div style="background: linear-gradient(
-            rgba(0, 0, 0, 0.39), 
-            rgba(0, 0, 0, 0.39)
-          ), url(assets/food_background.jpg); background-size: cover;  background-position: right; width: 100%; height: 450px;"
-        class="bg-white elevation-9 h-full block overflow-hidden flex xl:items-end lg:items-end lg:flex-row justify-center flex-col-reverse lg:p5 p-2">
-        <img src="assets/NutriAPP_mockup.png" alt="La mejor APP de nutrición en tus manos"
-          class="relative lg:top-5 lg:-left-5 top-5 -left-10 lg:h-9/10 lg:w-auto md:h-auto md:w-9/12 h-48 w-48" data-aos="zoom-in" />
-        <div
-          class="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-white h-1/3 xl:p-5 p-3 flex justify-center items-end" data-aos="zoom-in-up">
-          <strong><i>NutriCare te ayuda a llevar una mejor alimentación.</i></strong>
-        </div>
-      </div>
-      <div class="numbertext">2 / 3</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div style="background: linear-gradient(
-            rgba(0, 0, 0, 0.39), 
-            rgba(0, 0, 0, 0.39)
-          ), url(assets/food_background.jpg); background-size: cover;  background-position: right; width: 100%; height: 450px;"
-        class="bg-white elevation-9 h-full block overflow-hidden flex xl:items-end lg:items-end lg:flex-row justify-center flex-col-reverse lg:p5 p-2">
-        <img src="assets/NutriAPP_mockup.png" alt="La mejor APP de nutrición en tus manos"
-          class="relative lg:top-5 lg:-left-5 top-5 -left-10 lg:h-9/10 lg:w-auto md:h-auto md:w-9/12 h-48 w-48" data-aos="zoom-in" />
-        <div
-          class="xl:text-5xl lg:text-4xl md:text-3xl text-2xl text-white h-1/3 xl:p-5 p-3 flex justify-center items-end" data-aos="zoom-in-up">
-          <strong><i>NutriCare te ayuda a llevar una mejor alimentación.</i></strong>
-        </div>
-      </div>
-      <div class="numbertext">3 / 3</div>
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
     </header>
+
     <div id="about" class="w-full bg-gray-300 h-3/4 lg:p-8 p-3 flex justify-around lg:flex-row flex-col items-center">
       <div class="lg:w-1/3 md:text-3xl text-2xl text-center flex items-center" data-aos="fade-right" data-aos-offset="300"
       data-aos-easing="ease-in-sine">
@@ -126,6 +128,40 @@
         </ul>
       </div>
     </div>
+
+    <div class="h-64" style="background-image: url(assets/main_bg.jpg); background-size: cover;"></div>
+    <div id="us" class="w-full bg-gray-300 h-3/4 lg:p-8 p-3 flex justify-around lg:flex-row flex-col items-center">
+      <div
+        class="bg-white elevation-5 lg:w-1/3 md:w-2/3 p-5 md:text-3xl text-2xl flex justify-around items-center flex-col text-center">
+        <span class="md:text-5xl text-4xl">Recetas</span>
+        <img class="object-cover w-48 h-48" src="assets/recipe.jpeg" data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+      </div>
+      <div class="lg:w-1/3 md:text-3xl text-2xl text-center flex items-center" data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+        Disfruta de diversas recetas o busca lo que mas te gusta,
+        aprende a comer bien de manera fácil y comoda. 
+      </div>
+    </div>
+
+    <div class="h-64" style="background-image: url(assets/main_bg.jpg); background-size: cover;"></div>
+    <div id="about" class="w-full bg-gray-300 h-3/4 lg:p-8 p-3 flex justify-around lg:flex-row flex-col items-center">
+      <div class="lg:w-1/3 md:text-3xl text-2xl text-center flex items-center" data-aos="fade-right" data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+      Conoce las calorias que comes y controlalo para llegar a tus metas, 
+      bajar de peso, mantenerte en tu peso ideal o incluso subir de manera
+      sana.
+      </div>
+      <div
+        class="bg-white elevation-5 lg:w-1/3 md:w-3/5 p-5 md:text-4xl text-3xl flex justify-around items-center flex-col text-center">
+        <span class="md:text-5xl text-4xl">Lo que comes</span>
+      <img class="object-cover w-full h-48"
+      src="assets/calculator.jpeg" data-aos="fade-left" data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+      </div>
+    </div>
+
     <div class="h-64" style="background-image: url(assets/main_bg.jpg); background-size: cover;"></div>
     <div id="us" class="w-full bg-gray-300 h-3/4 lg:p-8 p-3 flex justify-around lg:flex-row flex-col items-center">
       <div
